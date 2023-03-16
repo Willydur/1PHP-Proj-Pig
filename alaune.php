@@ -24,13 +24,11 @@
             <li><a href="panier.php">Panier </a></li>
             <li><a href="compte.php">Compte </a></li>
             <li>
-              <a href="">
-                <!-- name="loop" -->
-                <form method="GET" action="acceuil.php">
-                  <input type="search" name="mots" value="<?php ?>" placeholder="Rechercher un film" />
-                  <button type="submit" name="valider">&#x1F50E;&#xFE0E;</button>
-                </form>
-              </a>
+              <!-- name="loop" -->
+              <form method="GET" action="recherche.php">
+                <input type="search" name="mots" placeholder="Rechercher un film" />
+                <button type="submit" name="valider">&#x1F50E;&#xFE0E;</button>
+              </form>
             </li>
           </ul>
         </nav>

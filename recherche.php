@@ -1,5 +1,8 @@
 <?php
-//connexion à la base de données
+session_start();
+if (!isset($_GET['mots'])){
+    header("Location:acceuil.php");
+}
 ?>
 
 <!DOCTYPE html>
@@ -29,12 +32,11 @@
                         <li><a href="panier.php">Panier </a></li>
                         <li><a href="compte.php">Compte </a></li>
                         <li>
-                            <a href="#">
-                                <form method="GET">
-                                    <input type="search" name="sh" placeholder="Rechercher un film" />
-                                    <button type="submit">&#x1F50E;&#xFE0E;</button>
-                                </form>
-                            </a>
+                            <!-- name="loop" -->
+                            <form method="GET" action="recherche.php">
+                                <input type="search" name="mots" placeholder="Rechercher un film" />
+                                <button type="submit" name="valider">&#x1F50E;&#xFE0E;</button>
+                            </form>
                         </li>
                     </ul>
                 </nav>
@@ -44,8 +46,23 @@
 
     <div class="recherche">
         <?php
-        foreach ($variable as $key => $value) {
-            // on parcours la liste des films et on affiche les films qui correspondent à la recherche
+        $mots = $_GET['mots'];
+        $db = new PDO("mysql:host=eliascastel.ddns.net;dbname=php1Pig", "php1", "SupInfo2023!");
+        $res = $db->prepare("SELECT * FROM products WHERE nom LIKE '%$mots%' OR synopsis LIKE '%$mots%' OR prix LIKE '%$mots%' ");
+        $res->execute();
+        $films = $res->fetchAll(PDO::FETCH_ASSOC);
+        if (!empty($films)){
+            foreach ($films as $film) {
+                echo "<div class='film'>";
+                echo "<img src='image/" . $film['img'] . "' alt=''>";
+                echo "<h3>" . $film['nom'] . "</h3>";
+                echo "<p>" . $film['synopsis'] . "</p>";
+                echo "<p>" . $film['prix'] . "€</p>";
+                echo "<a href='panier.php?add=" . $film['ID'] . "'>Ajouter au panier</a>";
+                echo "</div>";
+            }
+        } else {
+            echo "Aucun film trouvé";
         }
         ?>
     </div>
