@@ -41,7 +41,7 @@
         <h1>Tout savoir sur les prochains films à venir !</h1>
         <div class="box1">
           <div class="rpz">
-            <img src="image/cdm.jpg" onclick="playVideo('video5.mp4')">
+            <img src="image/cdm.jpg" onclick="playVideo('videos/video5.mp4')">
           </div>
           <div class="rpz">
             <p>Sort le 15 mars 2023, issue de la catégorie : Drame</p>
@@ -78,11 +78,11 @@
             </a>
           </div>
           <div class="rpz">
-            <img src="image/crazybear.jpg" onclick="playVideo('video6.mp4')">
+            <img src="image/crazybear.jpg" onclick="playVideo('videos/video6.mp4')">
           </div>
 
           <div class="rpz">
-            <img src="image/dge.jpg" onclick="playVideo('video7.mp4')">
+            <img src="image/dge.jpg" onclick="playVideo('videos/video7.mp4')">
           </div>
           <div class="rpz">
             <p>Sort le 22 mars 2023, issue de la catégorie : Drame</p>
@@ -118,12 +118,12 @@
             </a>
           </div>
           <div class="rpz">
-            <img src="image/visage.jpg" onclick="playVideo('video8.mp4')">
+            <img src="image/visage.jpg" onclick="playVideo('videos/video8.mp4')">
 
           </div>
 
           <div class="rpz">
-            <img src="image/reyes.jpg" onclick="playVideo('video9.mp4')">
+            <img src="image/reyes.jpg" onclick="playVideo('videos/video9.mp4')">
           </div>
           <div class="rpz">
             <p>Sort le 29 mars 2023, issue de la catégorie : Aventure, Drame</p>
@@ -160,12 +160,12 @@
             </a>
           </div>
           <div class="rpz">
-            <img src="image/hokusai.jpg" onclick="playVideo('video10.mp4')">
+            <img src="image/hokusai.jpg" onclick="playVideo('videos/video10.mp4')">
 
           </div>
 
           <div class="rpz">
-            <img src="image/jw.jpg" onclick="playVideo('video1.mp4')">
+            <img src="image/jw.jpg" onclick="playVideo('videos/video1.mp4')">
           </div>
           <div class="rpz">
             <p>Sort le 22 mars 2023, issue de la catégorie : Action</p>
@@ -196,12 +196,12 @@
             </a>
           </div>
           <div class="rpz">
-            <img src="image/mario.jpg" onclick="playVideo('video2.mp4')">
+            <img src="image/mario.jpg" onclick="playVideo('videos/video2.mp4')">
 
           </div>
 
           <div class="rpz">
-            <img src="image/dalva.jpg" onclick="playVideo('video3.mp4')">
+            <img src="image/dalva.jpg" onclick="playVideo('videos/video3.mp4')">
           </div>
           <div class="rpz">
             <p>Sort le 22 mars 2023, issue de la catégorie : Drame</p>
@@ -236,7 +236,7 @@
             </a>
           </div>
           <div class="rpz">
-            <img src="image/4th.jpg" onclick="playVideo('video4.mp4')">
+            <img src="image/4th.jpg" onclick="playVideo('videos/video4.mp4')">
           </div>
         </div>
       </div>
