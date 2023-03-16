@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html>
 
@@ -24,12 +27,11 @@
             <li><a href="panier.php">Panier </a></li>
             <li><a href="compte.php">Compte </a></li>
             <li>
-              <a href="">
-                <form method="GET">
-                  <input type="search" name="sh" placeholder="Rechercher un film" />
-                  <button type="submit">&#x1F50E;&#xFE0E;</button>
-                </form>
-              </a>
+              <!-- name="loop" -->
+              <form method="GET" action="recherche.php">
+                <input type="search" name="mots" placeholder="Rechercher un film" />
+                <button type="submit" name="valider">&#x1F50E;&#xFE0E;</button>
+              </form>
             </li>
           </ul>
         </nav>
