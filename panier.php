@@ -13,7 +13,7 @@ if (isset($_GET['film'])) {
   sleep(1);
   header("Location:panier.php");
 }
-if (isset($_GET['supprimer'])){
+if (isset($_GET['supprimer'])) {
   $id = $_GET['supprimer'];
   unset($_SESSION['cart'][$id]);
   $db = new PDO("mysql:host=eliascastel.ddns.net;dbname=php1Pig", "php1", "SupInfo2023!");
@@ -43,6 +43,10 @@ if (isset($_GET['supprimer'])){
       grid-template-columns: repeat(3, 1fr);
       grid-gap: 10px;
       grid-auto-rows: minmax(100px, auto);
+      align-content: space-evenly;
+      justify-content: center;
+      align-items: center;
+      justify-items: stretch;
     }
 
     .grid-item {
@@ -90,8 +94,8 @@ if (isset($_GET['supprimer'])){
         <h1>Votre panier</h1>
         <div class="grille">
           <?php
-          if (!empty($_SESSION['cart'])){
-            if (!empty($_SESSION['cart'][1])){
+          if (!empty($_SESSION['cart'])) {
+            if (!empty($_SESSION['cart'][1])) {
               $cart = $_SESSION['cart'];
               $compteur = 0;
               foreach ($cart as $un_film) {
