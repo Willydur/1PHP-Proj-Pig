@@ -1,3 +1,22 @@
+<?php
+session_start();
+if (isset($_GET['film'])) {
+  $id = $_GET['film'];
+  if (isset($_SESSION['panier'][$id])) {
+    $_SESSION['panier'][$id]++;
+  } else {
+    $_SESSION['panier'][$id] = 1;
+  }
+  var_dump($_SESSION);
+  $db = new PDO("mysql:host=eliascastel.ddns.net;dbname=php1Pig", "php1", "SupInfo2023!");
+  $a = implode(",", $_SESSION['panier']);
+  $b = $_SESSION['name'];
+  $res = $db->prepare("UPDATE user SET cart=? WHERE nom=?");
+  $res->bindParam(1, $a);
+  $res->bindParam(2, $b);
+  $res->execute();
+}
+?>
 <!DOCTYPE html>
 <html>
 
