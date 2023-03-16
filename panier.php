@@ -5,8 +5,8 @@
   <title>Panier</title>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="acceuil.css" type="text/css" />
-  <link rel="stylesheet" href="panier.css" type="text/css" />
+  <link rel="stylesheet" href="css/acceuil.css" type="text/css" />
+  <link rel="stylesheet" href="css/panier.css" type="text/css" />
 </head>
 
 <body>
