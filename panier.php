@@ -26,6 +26,28 @@ if (isset($_GET['film'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="css/acceuil.css" type="text/css" />
   <link rel="stylesheet" href="css/panier.css" type="text/css" />
+
+  <style>
+    .grille {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 10px;
+      grid-auto-rows: minmax(100px, auto);
+    }
+
+    .grid-item {
+      background-color: white;
+      border: 1px solid black;
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;
+    }
+
+    .grid-item>img {
+      width: 100%;
+      height: 100%;
+    }
+  </style>
 </head>
 
 <body>
@@ -54,23 +76,18 @@ if (isset($_GET['film'])) {
         </nav>
       </div>
       <br>
-      <div class="contpan">
-        <h1>Ton panier actuel</h1>
-        <?php
 
-        ?>
-
-
-        <br><br><br><br><br>
-
-
-
-      </div>
-
-
-
-
-
+      <center>
+        <div class="grille">
+          <?php
+          for ($i = 0; $i < 50; $i++) {
+            echo '<div class="grid-item">';
+            echo '<img src"./image/4th.jpg" >';
+            echo '</div>';
+          }
+          ?>
+        </div>
+      </center>
 
       <div class="footer">
         <ul class="socialnet">
