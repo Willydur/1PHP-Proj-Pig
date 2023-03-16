@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!isset($_GET['mots'])){
+if (!isset($_GET['mots'])) {
     header("Location:acceuil.php");
 }
 ?>
@@ -15,6 +15,37 @@ if (!isset($_GET['mots'])){
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
     <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="css/acceuil.css" type="text/css" />
+
+    <style>
+        .recherche {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 50px;
+            flex-direction: row;
+            align-content: space-around;
+            align-items: center;
+        }
+
+        .img-film {
+            width: 200px;
+            height: 300px;
+            margin: 10px;
+        }
+
+        .film {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin: 10px;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            width: 300px;
+            height: 500px;
+        }
+    </style>
 </head>
 
 <body>
@@ -51,10 +82,10 @@ if (!isset($_GET['mots'])){
         $res = $db->prepare("SELECT * FROM products WHERE nom LIKE '%$mots%' OR synopsis LIKE '%$mots%' OR prix LIKE '%$mots%' ");
         $res->execute();
         $films = $res->fetchAll(PDO::FETCH_ASSOC);
-        if (!empty($films)){
+        if (!empty($films)) {
             foreach ($films as $film) {
                 echo "<div class='film'>";
-                echo "<img src='image/" . $film['img'] . "' alt=''>";
+                echo "<img class='img-film' src='image/" . $film['img'] . "' alt=''>";
                 echo "<h3>" . $film['nom'] . "</h3>";
                 echo "<p>" . $film['synopsis'] . "</p>";
                 echo "<p>" . $film['prix'] . "€</p>";
