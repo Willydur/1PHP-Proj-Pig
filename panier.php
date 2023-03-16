@@ -14,7 +14,7 @@
     <div class="contenu">
       <div class="navbar">
         <div class="logo">
-          <img src="2023.png" width="150px" />
+          <img src="image/2023.png" width="150px" />
         </div>
         <nav>
           <ul>
@@ -57,22 +57,22 @@
         <ul class="socialnet">
           <li>
             <a href="">
-              <img src="facebook.png" alt="" />
+              <img src="image/facebook.png" alt="" />
             </a>
           </li>
           <li>
             <a href="">
-              <img src="twitter.png" alt="" />
+              <img src="image/twitter.png" alt="" />
             </a>
           </li>
           <li>
             <a href="">
-              <img src="linkedin.png" alt="" />
+              <img src="image/linkedin.png" alt="" />
             </a>
           </li>
           <li>
             <a href="">
-              <img src="instagram.png" alt="" />
+              <img src="image/instagram.png" alt="" />
             </a>
           </li>
         </ul>
