@@ -31,7 +31,7 @@
     <div class="contenu">
       <div class="navbar">
         <div class="logo">
-          <img src="2023.png" width="150px" />
+          <img src="image/2023.png" width="150px" />
         </div>
         <nav>
           <ul>
@@ -42,7 +42,7 @@
             <li><a href="compte.php">Compte </a></li>
             <li>
               <a href="">
-                <form method="GET" action="" name="loop">
+                <form method="GET" action="acceuil.php" name="loop">
                   <input type="search" name="mots" value="<?php ?>" placeholder="Rechercher un film" />
                   <button type="submit" name="valider">&#x1F50E;&#xFE0E;</button>
                 </form>
