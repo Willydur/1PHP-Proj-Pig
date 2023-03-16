@@ -2,14 +2,14 @@
 session_start();
 if (isset($_GET['film'])) {
   $id = $_GET['film'];
-  if (isset($_SESSION['panier'][$id])) {
-    $_SESSION['panier'][$id]++;
+  if (isset($_SESSION['cart'][$id])) {
+    $_SESSION['cart'][$id]++;
   } else {
-    $_SESSION['panier'][$id] = 1;
+    $_SESSION['cart'][$id] = 1;
   }
   var_dump($_SESSION);
   $db = new PDO("mysql:host=eliascastel.ddns.net;dbname=php1Pig", "php1", "SupInfo2023!");
-  $a = implode(",", $_SESSION['panier']);
+  $a = implode(",", $_SESSION['cart']);
   $b = $_SESSION['name'];
   $res = $db->prepare("UPDATE user SET cart=? WHERE nom=?");
   $res->bindParam(1, $a);
@@ -79,10 +79,20 @@ if (isset($_GET['film'])) {
       <center>
         <div class="grille">
           <?php
-          for ($i = 0; $i < 50; $i++) {
-            echo '<div class="grid-item">';
-            echo '<img src"./image/4th.jpg" >';
-            echo '</div>';
+          if (!empty($_SESSION['cart'])){
+            $cart = $_SESSION['cart'];
+            foreach ($cart as $un_film) {
+              $db = new PDO("mysql:host=eliascastel.ddns.net;dbname=php1Pig", "php1", "SupInfo2023!");
+              $res = $db->prepare("SELECT * FROM products WHERE id=?");
+              $res->bindParam(1, $un_film);
+              $res->execute();
+              $film = $res->fetch();
+              echo '<div class="grid-item">';
+              echo '<img src="./image/' . $film['img'] . '" >';
+              echo '</div>';
+            }
+          } else {
+            echo '<h1>Votre panier est vide</h1>';
           }
           ?>
         </div>
