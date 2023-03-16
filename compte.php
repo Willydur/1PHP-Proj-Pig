@@ -1,22 +1,20 @@
 <?php
 session_start();
 if (isset($_POST['valider'])) {
-    if (isset($_POST['email']) && isset($_POST['mdp'])) {
-        $email = $_POST['email'];
-        $mdp = $_POST['mdp'];
-        $erreur = "";
-
-        $conn = mysqli_connect("localhost", "root", "", "connexion");
-        if (!$conn)
-            die('Erreur : ' . mysql_connect_error());
-
-        $req = mysqli_query($conn, "SELECT * FROM user WHERE email = '$email' AND mdp ='$mdp' ");
+    if (isset($_POST['name']) && isset($_POST['pass'])) {
+        $name = $_POST['name'];
+        $pass = $_POST['pass'];
+        $conn = mysqli_connect("eliascastel.ddns.net", "php1", "SupInfo2023!", "php1Pig");
+        $req = mysqli_query($conn, "SELECT * FROM user WHERE name = '$name' AND pass ='$pass' ");
         $num_ligne = mysqli_num_rows($req);
         if ($num_ligne > 0) {
+            $_SESSION['name'] = $name;
+            $a = mysqli_query($conn, "SELECT cart FROM user WHERE name = '$name'");
+            $b = mysqli_fetch_assoc($a);
+            $_SESSION['cart'] = $b['cart'];
             header("Location:acceuil.php");
-            $_SESSION['email'] = $email;
         } else {
-            $erreur = "Adresse Mail ou Mot de passe incorrectes !";
+            $erreur = "Nom ou code incorect !";
         }
     }
 }
@@ -29,7 +27,7 @@ if (isset($_POST['valider'])) {
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion</title>
-    <link rel="stylesheet" href="css/compte.css">
+    <link rel="stylesheet" href="compte.css">
 </head>
 
 <body>
@@ -41,10 +39,10 @@ if (isset($_POST['valider'])) {
         }
         ?>
         <form action="" method="POST">
-            <label>Adresse Mail</label>
-            <input type="text" name="email">
+            <label>Nom</label>
+            <input type="text" name="name">
             <label>Mot de Passe</label>
-            <input type="password" name="mdp">
+            <input type="password" name="pass">
             <input type="submit" value="Valider" name="valider">
         </form>
     </section>
