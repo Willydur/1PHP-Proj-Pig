@@ -1,4 +1,5 @@
 <?php
+session_start();
 // $mots=$_GET["mots"];
 // $valider=$_GET["valider"];
 // if(isset($valider) && !empty(trim($mots))) {
