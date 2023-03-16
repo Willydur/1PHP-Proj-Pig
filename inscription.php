@@ -1,5 +1,6 @@
 <?php
 session_start();
+session_destroy();
 if (isset($_POST['valider'])) {
     if (isset($_POST['name']) && isset($_POST['pass'])) {
         $name = $_POST['name'];

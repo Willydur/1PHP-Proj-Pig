@@ -44,7 +44,7 @@
 
           $reponse = $sql->fetchall();
           foreach ($reponse as $films) {
-            echo "<div class='movie1'><img src='image/" . $films['img'] . "' alt=''>";
+            echo "<div class='movie1'><a href='videos/video1.mp4' target='_blank'><img src='image/" . $films['img'] . "' alt=''></a>";
             echo "<h2 class='nom'>" . $films['nom'] . "</h2><br><h4>SYNOPSIS</h4><p>" . $films['synopsis'] . "<p/><br>";
             echo "<h3 class='prix'>" . $films['prix'] . "</h3><a href='Panier.php?film=".$films['ID']."' class='button' onclick='add(11)'>&#9755; Ajouter au panier &#9754;</a></div>";
           }

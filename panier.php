@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 if (isset($_GET['film'])) {
   $id = $_GET['film'];
   $_SESSION['cart'][] = $id;
@@ -95,25 +96,21 @@ if (isset($_GET['supprimer'])) {
         <div class="grille">
           <?php
           if (!empty($_SESSION['cart'])) {
-            if (!empty($_SESSION['cart'][1])) {
-              $cart = $_SESSION['cart'];
-              $compteur = 0;
-              foreach ($cart as $un_film) {
-                if ($un_film != "") {
-                  $db = new PDO("mysql:host=eliascastel.ddns.net;dbname=php1Pig", "php1", "SupInfo2023!");
-                  $res = $db->prepare("SELECT * FROM products WHERE id=?");
-                  $res->bindParam(1, $un_film);
-                  $res->execute();
-                  $film = $res->fetch();
-                  echo '<div class="grid-item">';
-                  echo '<img src="./image/' . $film['img'] . '" >';
-                  echo '<a href="panier.php?supprimer=' . $compteur . '">Supprimer</a>';
-                  echo '</div>';
-                }
-                $compteur++;
+            $cart = $_SESSION['cart'];
+            $compteur = 0;
+            foreach ($cart as $un_film) {
+              if ($un_film != "") {
+                $db = new PDO("mysql:host=eliascastel.ddns.net;dbname=php1Pig", "php1", "SupInfo2023!");
+                $res = $db->prepare("SELECT * FROM products WHERE id=?");
+                $res->bindParam(1, $un_film);
+                $res->execute();
+                $film = $res->fetch();
+                echo '<div class="grid-item">';
+                echo '<img src="./image/' . $film['img'] . '" >';
+                echo '<a href="panier.php?supprimer=' . $compteur . '">Supprimer</a>';
+                echo '</div>';
               }
-            } else {
-              echo '<h1>Votre panier est vide</h1>';
+              $compteur++;
             }
           } else {
             echo '<h1>Votre panier est vide</h1>';
