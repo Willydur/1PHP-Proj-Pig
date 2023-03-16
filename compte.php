@@ -38,19 +38,23 @@ if (isset($_POST['valider'])) {
 
 <body>
     <section>
-        <h1> Connexion</h1>
-        <?php
-        if (isset($erreur)) {
-            echo "<p class= 'Erreur'>" . $erreur . "</p>";
-        }
-        ?>
-        <form action="" method="POST">
-            <label>Nom</label>
-            <input type="text" name="name">
-            <label>Mot de Passe</label>
-            <input type="password" name="pass">
-            <input type="submit" value="Valider" name="valider">
-        </form>
+        <center>
+            <h1> Connexion</h1>
+            <?php
+            if (isset($erreur)) {
+                echo "<p class= 'Erreur'>" . $erreur . "</p>";
+            }
+            ?>
+            <form action="" method="POST">
+                <label>Nom</label>
+                <input type="text" name="name">
+                <br>
+                <label>Mot de Passe</label>
+                <input type="password" name="pass">
+                <br>
+                <input type="submit" value="Valider" name="valider">
+            </form>
+        </center>
     </section>
 </body>
 
