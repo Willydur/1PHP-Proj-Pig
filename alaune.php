@@ -1,20 +1,3 @@
-<?php
-// $mots=$_GET["mots"];
-// $valider=$_GET["valider"];
-// if(isset($valider) && !empty(trim($mots))) {
-//   include("alaune.php" && "nouveautes.php");
-//   $res=$pdo->prepare("select nom from products where nom like '%$mots%'");
-//   $res->setFetchMode(PDO::FETCH_ASSOC).
-//   $res->execute();
-//   $tab=$res->fetchAll();
-//   $afficher="oui";
-// }
-
-
-
-?>
-
-
 <!DOCTYPE html>
 <html>
 
@@ -42,7 +25,8 @@
             <li><a href="compte.php">Compte </a></li>
             <li>
               <a href="">
-                <form method="GET" action="acceuil.php" name="loop">
+                <!-- name="loop" -->
+                <form method="GET" action="acceuil.php">
                   <input type="search" name="mots" value="<?php ?>" placeholder="Rechercher un film" />
                   <button type="submit" name="valider">&#x1F50E;&#xFE0E;</button>
                 </form>
@@ -97,22 +81,22 @@
         <ul class="socialnet">
           <li>
             <a href="">
-              <img src="facebook.png" alt="" />
+              <img src="image/facebook.png" alt="" />
             </a>
           </li>
           <li>
             <a href="">
-              <img src="twitter.png" alt="" />
+              <img src="image/twitter.png" alt="" />
             </a>
           </li>
           <li>
             <a href="">
-              <img src="linkedin.png" alt="" />
+              <img src="image/linkedin.png" alt="" />
             </a>
           </li>
           <li>
             <a href="">
-              <img src="instagram.png" alt="" />
+              <img src="image/instagram.png" alt="" />
             </a>
           </li>
         </ul>
