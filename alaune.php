@@ -56,7 +56,7 @@
         <h1>Les films du moment à ne pas rater !</h1>
         <div class='box1'>
           <?php
-          $db = new PDO("mysql:host=localhost;dbname=panier", "root", "");
+          $db = new PDO("mysql:host=eliascastel.ddns.net;dbname=php1Pig", "php1", "SupInfo2023!");
           $sql = $db->prepare("SELECT * FROM products");
           $sql->execute();
 
