@@ -89,7 +89,7 @@ if (!isset($_GET['mots'])) {
                 echo "<h3>" . $film['nom'] . "</h3>";
                 echo "<p>" . $film['synopsis'] . "</p>";
                 echo "<p>" . $film['prix'] . "€</p>";
-                echo "<a href='panier.php?add=" . $film['ID'] . "'>Ajouter au panier</a>";
+                echo "<a href='panier.php?film=" . $film['ID'] . "'>Ajouter au panier</a>";
                 echo "</div>";
             }
         } else {

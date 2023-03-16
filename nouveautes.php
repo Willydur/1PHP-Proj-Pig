@@ -60,7 +60,7 @@ session_start();
             <br>
             <br>
             <h3 class="prix">15€</h3>
-            <a href="Panier.php" class="button" onclick="add(1)">&#9755; Ajouter au panier &#9754;
+            <a href="Panier.php?film=5" class="button" onclick="add(1)">&#9755; Ajouter au panier &#9754;
             </a>
           </div>
 
@@ -76,7 +76,7 @@ session_start();
             <br>
             <br>
             <h3 class="prix">15€</h3>
-            <a href="Panier.php" class="button" onclick="add(2)">&#9755; Ajouter au panier &#9754;
+            <a href="Panier.php?film=6" class="button" onclick="add(2)">&#9755; Ajouter au panier &#9754;
             </a>
           </div>
           <div class="rpz">
@@ -100,154 +100,9 @@ session_start();
             <br>
             <br>
             <h3 class="prix">15€</h3>
-            <a href="Panier.php" class="button" onclick="add(3)">&#9755; Ajouter au panier &#9754;
+            <a href="Panier.php?film=7" class="button" onclick="add(3)">&#9755; Ajouter au panier &#9754;
             </a>
           </div>
-
-          <div class="rpz">
-            <p>Sort le 29 mars 2023, issue de la catégorie : Drame</p>
-            <br>
-            <h2 class="nom">Je verrai toujours vos visages</h2>
-            <br>
-            <small>Depuis 2014, en France, <br>
-              la Justice Restaurative propose à des personnes victimes et auteurs d’infraction de dialoguer dans des
-              dispositifs sécurisés,<br>
-              encadrés par des professionnels et des bénévoles comme Judith, Fanny ou Michel.</small>
-            <br>
-            <br>
-            <h3 class="prix">15€</h3>
-            <a href="Panier.php" class="button" onclick="add(4)">&#9755; Ajouter au panier &#9754;
-            </a>
-          </div>
-          <div class="rpz">
-            <img src="image/visage.jpg" onclick="playVideo('videos/video8.mp4')">
-
-          </div>
-
-          <div class="rpz">
-            <img src="image/reyes.jpg" onclick="playVideo('videos/video9.mp4')">
-          </div>
-          <div class="rpz">
-            <p>Sort le 29 mars 2023, issue de la catégorie : Aventure, Drame</p>
-            <br>
-            <h2 class="nom">Los reyes del mundo</h2>
-            <br>
-            <small>Le jeune Rá vit avec ses amis Culebro, Sere, Winny et Nano dans les rues de Medellin. <br>
-              Leur espoir renaît lorsque le gouvernement promet à Rá le droit d’acquérir un terrain duquel sa famille
-              avait été chassée, <br>
-              comme des milliers d’autres Colombiens, par les paramilitaires. <br>
-              La bande de copains se met donc sur la route périlleuse qui mène dans l’arrière-pays. <br>
-              Un voyage palpitant entre aventure et délire commence.</small>
-            <br>
-            <br>
-            <h3 class="prix">15€</h3>
-            <a href="Panier.php" class="button" onclick="add(5)">&#9755; Ajouter au panier &#9754;
-            </a>
-          </div>
-
-          <div class="rpz">
-            <p>Sort le 26 mars 2023, issue de la catégorie : Aventure, Drame</p>
-            <br>
-            <h2 class="nom">Hokusai</h2>
-            <br>
-            <small>Japon, XVIIIème siècle. Alors que le pouvoir impérial impose sa censure sur les artistes, le jeune
-              Shunrô, <br>
-              apprenti peintre, est exclu de son école à cause de son tempérament impétueux et du style peu
-              conventionnel de ses estampes. <br>
-              Personne n’imagine alors qu’il deviendra Hokusai, célèbre auteur de la Grande vague de Kanagawa.</small>
-            <br>
-            <br>
-            <h3 class="prix">15€</h3>
-            <a href="Panier.php" class="button" onclick="add(6)">&#9755; Ajouter au panier &#9754;
-            </a>
-          </div>
-          <div class="rpz">
-            <img src="image/hokusai.jpg" onclick="playVideo('videos/video10.mp4')">
-
-          </div>
-
-          <div class="rpz">
-            <img src="image/jw.jpg" onclick="playVideo('videos/video1.mp4')">
-          </div>
-          <div class="rpz">
-            <p>Sort le 22 mars 2023, issue de la catégorie : Action</p>
-            <br>
-            <h2 class="nom">John Wick : Chapitre 4</h2>
-            <br>
-            <small>John Wick découvre un moyen de vaincre l’organisation criminelle connue sous le nom de la Grande
-              Table. <br>
-              Mais avant de gagner sa liberté, Il doit affronter un nouvel ennemi qui a tissé de puissantes alliances à
-              travers le monde et qui transforme les vieux amis de John en ennemis.</small>
-            <br>
-            <br>
-            <h3 class="prix">15€</h3>
-            <a href="Panier.php" class="button" onclick="add(7)">&#9755; Ajouter au panier &#9754;
-            </a>
-          </div>
-
-          <div class="rpz">
-            <p>Sort le 5 avril 2023, issue de la catégorie : Action, Aventure, Animation</p>
-            <br>
-            <h2 class="nom">Super Mario Bros, le film</h2>
-            <br>
-            <small>Un film basé sur l’univers du célèbre jeu : Super Mario Bros.</small>
-            <br>
-            <br>
-            <h3 class="prix">15€</h3>
-            <a href="Panier.php" class="button" onclick="add(8)">&#9755; Ajouter au panier &#9754;
-            </a>
-          </div>
-          <div class="rpz">
-            <img src="image/mario.jpg" onclick="playVideo('videos/video2.mp4')">
-
-          </div>
-
-          <div class="rpz">
-            <img src="image/dalva.jpg" onclick="playVideo('videos/video3.mp4')">
-          </div>
-          <div class="rpz">
-            <p>Sort le 22 mars 2023, issue de la catégorie : Drame</p>
-            <br>
-            <h2 class="nom">Dalva</h2>
-            <br>
-            <small>Dalva a 12 ans mais s'habille, se maquille et se vit comme une femme. <br>
-              Un soir, elle est brusquement retirée du domicile paternel. D'abord révoltée et dans l'incompréhension
-              totale, <br>
-              elle va faire la connaissance de Jayden, un éducateur, et de Samia, <br>
-              une adolescente au fort caractère.
-            </small>
-            <br>
-            <br>
-            <h3 class="prix">15€</h3>
-            <a href="Panier.php" class="button" onclick="add(9)">&#9755; Ajouter au panier &#9754;
-            </a>
-          </div>
-
-          <div class="rpz">
-            <p>Sort le 13 avril 2023, issue de la catégorie : Comédie, Drame</p>
-            <br>
-            <h2 class="nom">Brighton 4th</h2>
-            <br>
-            <small>Avec Levan Tedaishvili, Giorgi Tabidze, Nadia Mikhalkova
-              Un ancien champion de lutte géorgien part à Brighton 4th, New York, <br>
-              pour tenter d’aider son fils qui accumule les dettes de jeu.</small>
-            <br>
-            <br>
-            <h3 class="prix">15€</h3>
-            <a href="Panier.php" class="button" onclick="add(10)">&#9755; Ajouter au panier &#9754;
-            </a>
-          </div>
-          <div class="rpz">
-            <img src="image/4th.jpg" onclick="playVideo('videos/video4.mp4')">
-          </div>
-        </div>
-      </div>
-      <div class="videoplay" id="videoclick">
-        <video width="100%" controls autoplay id="video">
-          <source src="videos/video1.mp4" type="video/mp4">
-        </video>
-        <img src="image/close.jpg" class="bouttonclose" onclick="stopVideo()">
-      </div>
 
       <script>
         let videoclick = document.getElementById("videoclick");
