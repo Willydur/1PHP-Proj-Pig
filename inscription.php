@@ -5,13 +5,11 @@ if (isset($_POST['valider'])) {
         $name = $_POST['name'];
         $pass = $_POST['pass'];
         $conn = mysqli_connect("eliascastel.ddns.net", "php1", "SupInfo2023!", "php1Pig");
-        $req = mysqli_query($conn, "INSERT INTO user SET name = '$name', pass ='$pass', cart = '' ");
+        $req = mysqli_query($conn, "INSERT INTO user SET nom = '$name', pass ='$pass', cart = '' ");
         //$num_ligne = mysqli_num_rows($req);
         if ($req) {
             $_SESSION['name'] = $name;
-            $a = mysqli_query($conn, "SELECT cart FROM user WHERE name = '$name'");
-            $b = mysqli_fetch_assoc($a);
-            $_SESSION['cart'] = $b['cart'];
+            $_SESSION['cart'] = array();
             header("Location:acceuil.php");
         } else {
             $erreur = "Nom ou code incorect !";
