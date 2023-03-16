@@ -15,7 +15,7 @@
     <div class="contenu">
       <div class="navbar">
         <div class="logo">
-          <img src="assets/2023.png" width="150px" />
+          <img src="image/2023.png" width="150px" />
         </div>
         <nav>
           <ul>
@@ -56,7 +56,7 @@
           </a>
         </div>
         <div class="rpz">
-          <img src="assets/time.png" />
+          <img src="image/time.png" />
         </div>
       </div>
     </div>
@@ -66,22 +66,22 @@
     <ul class="socialnet">
       <li>
         <a href="">
-          <img src="assets/facebook.png" alt="" />
+          <img src="image/facebook.png" alt="" />
         </a>
       </li>
       <li>
         <a href="">
-          <img src="assets/twitter.png" alt="" />
+          <img src="image/twitter.png" alt="" />
         </a>
       </li>
       <li>
         <a href="">
-          <img src="assets/linkedin.png" alt="" />
+          <img src="image/linkedin.png" alt="" />
         </a>
       </li>
       <li>
         <a href="">
-          <img src="assets/instagram.png" alt="" />
+          <img src="image/instagram.png" alt="" />
         </a>
       </li>
     </ul>
